@@ -28,8 +28,6 @@ const Home = function Home() {
         const result2 = await axios.get(`/products/${n2}`)
         const result3 = await axios.get(`/products/${n3}`)
 
-        // console.log(products)
-
         setProducts([result1.data, result2.data, result3.data])
         setLoading(false)
       } catch (error) {

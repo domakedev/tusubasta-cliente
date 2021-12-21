@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { BsStarHalf } from 'react-icons/bs'
 import { AiFillLike } from 'react-icons/ai'
 import Header from '../../layout/Header/Header'
@@ -7,11 +7,16 @@ import Footer from '../../layout/Footer/Footer'
 import axios from '../../../utils/axios'
 import './ProductDetails.css'
 
-const ProductDetails = function ProductDetails() {
-  const id = useLocation().pathname.slice(-2)
+// Context
+import { useStateProduct } from '../../../context/Product.Context'
 
-  if (id.includes('e') || id.includes('d')) {
-    return (
+const ProductDetails = function ProductDetails() {
+  const { productID, productData, setProductData } = useStateProduct()
+
+  let NotProduct = ''
+
+  if (productID == null) {
+    NotProduct = (
       <div className="page-container">
         <Header />
         <div className="main">
@@ -23,23 +28,22 @@ const ProductDetails = function ProductDetails() {
         <Footer />
       </div>
     )
+    return NotProduct
   }
-  const [producto, setProduct] = useState()
 
-  // console.log(producto)
 
   useEffect(() => {
     window.scrollTo(0, 0)
 
     const bringUser = async () => {
-      const product = await axios.get(`/products/${id}`)
-      setProduct(product.data)
+      const product = await axios.get(`/products/${productID}`)
+      // setProduct(product.data)
+      setProductData(product.data)
     }
 
     bringUser()
-  }, [])
+  }, [productID])
 
-  // console.log(id)
 
   return (
     <div className="page-container">
@@ -54,21 +58,21 @@ const ProductDetails = function ProductDetails() {
 
         <div className="product-details-card">
           <div className="card-image-container">
-            <img className="card-image" src={producto?.image} alt="" />
+            <img className="card-image" src={productData?.image} alt="" />
           </div>
           <div className="card-data">
-            <h2 className="card-title title">{producto?.title}</h2>
+            <h2 className="card-title title">{productData?.title}</h2>
             <div className="card-micro-data">
               <div className="card-data-blocks">
                 <div className="card-data-block">
                   <div className="block-decoration" />
-                  <p className="block-title price">${producto?.price}</p>
+                  <p className="block-title price">${productData?.price}</p>
                 </div>
                 <div className="card-data-block">
                   <div className="block-decoration" />
                   <p className="block-title price">Descripción:</p>
                   <div className="block-description paragraph">
-                    {producto?.description}
+                    {productData?.description}
                   </div>
                 </div>
                 <div className="card-data-block">
@@ -76,15 +80,15 @@ const ProductDetails = function ProductDetails() {
                   <p className="block-title price">Valoraciones:</p>
                   <p className="block-stat">
                     <BsStarHalf />
-                    {producto?.rating.rate}
+                    {productData?.rating.rate}
                   </p>
                   <p className="block-stat">
                     <AiFillLike />
-                    {producto?.rating.count}
+                    {productData?.rating.count}
                   </p>
                 </div>
               </div>
-              <div className="card-category">{producto?.category}</div>
+              <div className="card-category">{productData?.category}</div>
             </div>
           </div>
         </div>

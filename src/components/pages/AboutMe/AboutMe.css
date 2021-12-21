@@ -1,0 +1,279 @@
+.about-subtitle {
+  margin-top: 50px;
+}
+
+.about-card {
+  margin-top: 400px;
+  margin-bottom: 98px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.me-card-image-container {
+  /* background-color: white; */
+  width: 600px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.me-card-data {
+  padding: 30px 40px;
+  width: 600px;
+}
+
+@media screen and (min-width: 1080px) {
+  .me-card-data {
+    padding: 30px 70px;
+    width: 50%;
+  }
+  .me-card-image-container {
+    width: 30%;
+  }
+  .me-card-image {
+    width: 60%;
+    display: block;
+  }
+}
+
+/* Secondary buttons */
+.card-secondary-buttons {
+  position: absolute;
+  height: 400px;
+  top: -324px;
+  right: 282px;
+  z-index: 0;
+}
+@media screen and (min-width: 700px) {
+  .card-secondary-buttons {
+    position: absolute;
+    height: 400px;
+    top: -505px;
+    right: 430px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .card-secondary-buttons {
+    position: absolute;
+    height: 400px;
+    top: -220px;
+    right: 430px;
+  }
+
+  .about-card {
+    margin-top: 140px;
+  }
+
+  .card-principal-button {
+    top: 450px;
+    right: 284px;
+  }
+}
+.circular-lines {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 65px;
+  left: -195px;
+}
+
+@media screen and (min-width: 700px) {
+  .circular-lines {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 190px;
+    left: -40px;
+  }
+}
+
+.circular-line {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3.30909px solid #042c54;
+  border-radius: 50%;
+}
+.circular-line__1 {
+  width: 120px;
+  height: 120px;
+  top: 140px;
+  left: 140px;
+}
+.circular-line__2 {
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+}
+.circular-line__3 {
+  width: 280px;
+  height: 280px;
+  top: 60px;
+  left: 60px;
+}
+.circular-line__4 {
+  width: 360px;
+  height: 360px;
+  top: 20px;
+  left: 20px;
+}
+
+.card-secondary-button {
+  position: absolute;
+  background-color: var(--secondary-background-color);
+  width: 75px;
+  height: 75px;
+  border-radius: 16.55px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-secondary-button__email {
+  top: 75px;
+  left: 25px;
+}
+.card-secondary-button__github {
+  top: 15px;
+  left: 195px;
+}
+.card-secondary-button__message {
+  top: 241px;
+  left: -17px;
+}
+.card-principal-button {
+  background-color: var(--secondary-background-color);
+  width: 250px;
+  height: 75px;
+  cursor: not-allowed;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--principal-font-family);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 30px;
+  color: white;
+  gap: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #ff8a71;
+  border-radius: 16.5455px;
+  position: absolute;
+  right: 284px;
+}
+.card-image-background {
+  position: absolute;
+  bottom: 0px;
+  right: 34px;
+  width: 376px;
+  height: 400px;
+  background: #042c54;
+  border-radius: 183.655px 0px 0px 0px;
+}
+.me-card-image {
+  position: absolute;
+  bottom: 0px;
+  right: 34px;
+  width: 404px;
+  z-index: 1;
+  border-radius: 247px 0px 0px 0px;
+  clip-path: polygon(
+    -22% 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    19% 63%,
+    34% 61%,
+    20% 59%,
+    20% 61%,
+    21% 10%
+  );
+}
+
+/* Data Textual */
+.me-card-data {
+  max-width: 625px;
+}
+.me-data-intro {
+  font-family: var(--principal-font-family);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: rgba(113, 229, 255, 1);
+}
+
+.me-data-title {
+  font-size: 3.4rem;
+  text-align: left;
+  line-height: 45px;
+  margin: 0;
+}
+
+.me-data-subtitle {
+  font-family: var(--principal-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 30px;
+  /* identical to box height, or 187% */
+
+  color: #ff8a71;
+  margin-top: 45px;
+}
+
+.me-data-description {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 187% */
+
+  color: #81afdd;
+}
+
+@media screen and (max-width: 550px) {
+  .card-principal-button {
+    right: 52px;
+    z-index: 1;
+    bottom: 0px;
+  }
+  .me-card-image {
+    width: 300px;
+    clip-path: none;
+    border-radius: 0;
+  }
+  .card-image-background {
+    width: 300px;
+  }
+  .circular-lines {
+    position: absolute;
+    top: 160px;
+    left: -39px;
+    width: 317px;
+    overflow-x: hidden;
+  }
+  .card-secondary-button__message {
+    top: 81px;
+    left: 236px;
+  }
+  .card-secondary-button__github {
+    top: 6px;
+    left: 143px;
+  }
+  .about-card {
+    margin-top: 240px;
+  }
+}

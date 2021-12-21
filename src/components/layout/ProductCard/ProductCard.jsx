@@ -3,7 +3,15 @@ import './ProductCard.css'
 import { MdAccessTimeFilled } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
+// Context
+import { useStateProduct } from '../../../context/Product.Context'
+
 const ProductCard = function ProductCard({ id = 0, title = '', image = '' }) {
+  //
+  //
+  //
+  const { setProductID } = useStateProduct()
+
   const [seconds, setSeconds] = useState(18000001)
 
   useEffect(() => {
@@ -38,26 +46,19 @@ const ProductCard = function ProductCard({ id = 0, title = '', image = '' }) {
                 : new Date(seconds).toLocaleTimeString()}
             </p>
           </div>
-          {/* <button
-            disabled={seconds < 18001000}
-            type="button"
-            className="product-button"
-          >
-            Ver detalles
-          </button> */}
           <Link
+            onClick={() => {
+              setProductID(id)
+            }}
             disabled={seconds < 18001000}
             className={
               seconds < 18001000
                 ? 'product-button product-button__disabled'
                 : `product-button`
             }
-            // to={seconds < 18001000 ? '/' : `/product-details/${id}`}
-            // to={seconds < 18001000 ? '/' : `/product-details/${id}`}
-
             to={{
               pathname: seconds < 18001000 ? '/' : `/detalle/${id}`,
-              // search: `${id}`,
+              // : `/detalle/${productID !== null ? productID : id}`,
               // hash: `${id}`,
             }}
           >

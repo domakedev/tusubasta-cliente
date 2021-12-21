@@ -1,12 +1,15 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 import './Header.css'
 
+// Context
+import { useStateProduct } from '../../../context/Product.Context'
+
 const CustomLink = function CustomLink({ children, to, ...props }) {
   const resolved = useResolvedPath(to)
   const match = useMatch({ path: resolved.pathname, end: true })
 
   return (
-    <div>
+    <div style={{ textAlign: 'end' }}>
       <Link
         className={match ? 'header-nav-option__active' : 'header-nav-option'}
         to={to}
@@ -20,6 +23,8 @@ const CustomLink = function CustomLink({ children, to, ...props }) {
 }
 
 const Header = function Header() {
+  const { productID } = useStateProduct()
+
   return (
     <div className="header">
       <div className="header-nav">
@@ -31,7 +36,10 @@ const Header = function Header() {
           </Link> */}
 
           <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/detalle/:id">Detalles del Producto</CustomLink>
+          {/* <CustomLink to="/detalle">Detalles del Producto</CustomLink> */}
+          <CustomLink to={`/detalle/${productID == null ? '' : productID}`}>
+            Detalles del Producto
+          </CustomLink>
           <CustomLink to="/sobre-mi">Sobre mí</CustomLink>
         </div>
       </div>

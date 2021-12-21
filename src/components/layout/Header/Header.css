@@ -62,6 +62,7 @@
   color: var(--principal-text-color);
   border-bottom: 5px solid transparent;
   text-decoration: none;
+  text-align: right;
 }
 
 .header-nav-option__active {
