@@ -25,7 +25,8 @@ const ProductDetails = function ProductDetails() {
   }
   const [producto, setProduct] = useState()
 
-  console.log(producto)
+  // console.log(producto)
+
   useEffect(() => {
     const bringUser = async () => {
       const product = await axios.get(`/products/${id}`)
@@ -35,7 +36,8 @@ const ProductDetails = function ProductDetails() {
     bringUser()
   }, [])
 
-  console.log(id)
+  // console.log(id)
+
   return (
     <div className="page-container">
       <Header />
