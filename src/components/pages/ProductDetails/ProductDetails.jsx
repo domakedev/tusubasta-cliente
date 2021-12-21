@@ -10,7 +10,7 @@ import './ProductDetails.css'
 const ProductDetails = function ProductDetails() {
   const id = useLocation().pathname.slice(-2)
 
-  if (id.includes('e')) {
+  if (id.includes('e') || id.includes('d')) {
     return (
       <div className="page-container">
         <Header />

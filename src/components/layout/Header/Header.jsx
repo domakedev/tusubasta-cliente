@@ -8,7 +8,6 @@ const CustomLink = function CustomLink({ children, to, ...props }) {
   return (
     <div>
       <Link
-        // style={{ textDecoration: match ? 'underline' : 'none' }}
         className={match ? 'header-nav-option__active' : 'header-nav-option'}
         to={to}
         // eslint-disable-next-line react/jsx-props-no-spreading
@@ -32,14 +31,8 @@ const Header = function Header() {
           </Link> */}
 
           <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/detalle">Detalles del Producto</CustomLink>
+          <CustomLink to="/detalle/:id">Detalles del Producto</CustomLink>
           <CustomLink to="/sobre-mi">Sobre mí</CustomLink>
-
-          {/* <Link className="header-nav-option" to="/detalle">
-            Detalles del Producto
-          </Link> */}
-
-          {/* <p className="header-nav-option">Sobre mí</p> */}
         </div>
       </div>
       {/* <div className="header-auth-buttons" /> */}
