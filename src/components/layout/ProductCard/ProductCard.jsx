@@ -52,7 +52,14 @@ const ProductCard = function ProductCard({ id = 0, title = '', image = '' }) {
                 ? 'product-button product-button__disabled'
                 : `product-button`
             }
-            to={seconds < 18001000 ? '/' : `/product-details/${id}`}
+            // to={seconds < 18001000 ? '/' : `/product-details/${id}`}
+            // to={seconds < 18001000 ? '/' : `/product-details/${id}`}
+
+            to={{
+              pathname: seconds < 18001000 ? '/' : `/detalle/${id}`,
+              // search: `${id}`,
+              // hash: `${id}`,
+            }}
           >
             Ver detalles
           </Link>{' '}

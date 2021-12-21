@@ -64,6 +64,17 @@
   text-decoration: none;
 }
 
-.header-nav-option:hover {
+.header-nav-option__active {
+  font-family: var(--principal-font-family);
+  font-size: var(--header-font-size);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: var(--principal-text-color);
+  border-bottom: 5px solid transparent;
+  text-decoration: none;
+
   border-bottom: 5px solid white;
 }

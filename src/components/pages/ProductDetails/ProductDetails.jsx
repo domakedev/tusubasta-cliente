@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { BsStarHalf } from 'react-icons/bs'
 import { AiFillLike } from 'react-icons/ai'
 import Header from '../../layout/Header/Header'
@@ -7,16 +8,16 @@ import axios from '../../../utils/axios'
 import './ProductDetails.css'
 
 const ProductDetails = function ProductDetails() {
-  const id = window.location.pathname.slice(-2)
+  const id = useLocation().pathname.slice(-2)
 
-  if (id.includes('s')) {
+  if (id.includes('e')) {
     return (
       <div className="page-container">
         <Header />
         <div className="main">
           <h1 className="product-details-title title">Ups!</h1>
           <p className="product-details-subtitle subtitle">
-            Ningun producto fue seleccionado, ve a Home.
+            Primero selecciona un producto, aqui: <Link to="/"> Home</Link>
           </p>
         </div>
         <Footer />
@@ -28,6 +29,8 @@ const ProductDetails = function ProductDetails() {
   // console.log(producto)
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+
     const bringUser = async () => {
       const product = await axios.get(`/products/${id}`)
       setProduct(product.data)
