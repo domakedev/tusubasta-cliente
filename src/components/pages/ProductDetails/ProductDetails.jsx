@@ -37,7 +37,6 @@ const ProductDetails = function ProductDetails() {
 
     const bringUser = async () => {
       const product = await axios.get(`/products/${productID}`)
-      // setProduct(product.data)
       setProductData(product.data)
     }
 

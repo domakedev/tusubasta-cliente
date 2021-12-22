@@ -15,7 +15,7 @@ const ProductCard = function ProductCard({ id = 0, title = '', image = '' }) {
   const [seconds, setSeconds] = useState(18000001)
 
   useEffect(() => {
-    // Random max 1 hora: extra
+    // Random max 5 minutos
     const num = Math.floor(Math.random() * 1000) * 60 * 5
 
     // Tiempo de ahora + extra
@@ -58,8 +58,6 @@ const ProductCard = function ProductCard({ id = 0, title = '', image = '' }) {
             }
             to={{
               pathname: seconds < 18001000 ? '/' : `/detalle/${id}`,
-              // : `/detalle/${productID !== null ? productID : id}`,
-              // hash: `${id}`,
             }}
           >
             Ver detalles
