@@ -46,7 +46,7 @@ const Landing = function Landing() {
         <div className="landing-hero">
           <div className="hero-text">
             <h1 className="landing-title title">
-              Descubre productos unicos y compralos antes que nadie
+              Descubre productos únicos y compralos antes que nadie
             </h1>
             <p className="landing-subtitle subtitle">
               No pierdas la oportunidad de comprar a los precios mas bajos del
