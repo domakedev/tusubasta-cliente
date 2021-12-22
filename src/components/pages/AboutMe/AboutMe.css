@@ -56,23 +56,6 @@
   }
 }
 
-@media screen and (min-width: 1080px) {
-  .card-secondary-buttons {
-    position: absolute;
-    height: 400px;
-    top: -220px;
-    right: 430px;
-  }
-
-  .about-card {
-    margin-top: 140px;
-  }
-
-  .card-principal-button {
-    top: 450px;
-    right: 284px;
-  }
-}
 .circular-lines {
   position: absolute;
   width: 400px;
@@ -283,5 +266,26 @@
   }
   .about-card {
     margin-top: 240px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .card-secondary-buttons {
+    position: absolute;
+    height: 400px;
+    top: -220px;
+    right: 430px;
+  }
+
+  .about-card {
+    margin-top: 140px;
+  }
+
+  .card-principal-button {
+    top: 617px;
+    right: 284px;
+  }
+  .circular-lines {
+    top: 350px;
   }
 }
