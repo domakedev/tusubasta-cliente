@@ -57,7 +57,7 @@ const ProductCard = function ProductCard({ id = 0, title = '', image = '' }) {
                 : `product-button`
             }
             to={{
-              pathname: seconds < 18001000 ? '/' : `/detalle/${id}`,
+              pathname: seconds < 18001000 ? '/home' : `/detalle/${id}`,
             }}
           >
             Ver detalles

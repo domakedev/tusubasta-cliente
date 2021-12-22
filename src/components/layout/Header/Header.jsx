@@ -28,14 +28,18 @@ const Header = function Header() {
   return (
     <div className="header">
       <div className="header-nav">
-        <div className="header-logotype">TU SUBASTA</div>
+        <div className="header-logotype">
+          <CustomLink to="/">
+            <span>TU SUBASTA</span>
+          </CustomLink>
+        </div>
 
         <div className="header-nav-options">
           {/* <Link className="header-nav-option" to="/">
             Home
           </Link> */}
 
-          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to="/home">Home</CustomLink>
           {/* <CustomLink to="/detalle">Detalles del Producto</CustomLink> */}
           <CustomLink to={`/detalle/${productID == null ? '' : productID}`}>
             Detalles del Producto
