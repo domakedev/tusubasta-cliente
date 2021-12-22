@@ -58,7 +58,7 @@ const Home = function Home() {
           ) : null}
           {products?.map((product) => (
             <ProductCard
-              key={product.id + product.title.length}
+              key={Math.floor(Math.random() * 30000)}
               id={product.id}
               title={product.title}
               image={product.image}
