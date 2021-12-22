@@ -22,7 +22,7 @@ const ProductDetails = function ProductDetails() {
         <div className="main">
           <h1 className="product-details-title title">Ups!</h1>
           <p className="product-details-subtitle subtitle">
-            Primero selecciona un producto, aqui: <Link to="/"> Home</Link>
+            Primero selecciona un producto, aqui: <Link to="/home"> Home</Link>
           </p>
         </div>
         <Footer />
