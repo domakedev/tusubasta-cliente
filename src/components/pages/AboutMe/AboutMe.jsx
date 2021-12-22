@@ -94,6 +94,13 @@ const AboutMe = function AboutMe() {
                 Aprender como funciona y se desarrolla el backend.
               </p>
             </div>
+            <div className="me-data-block">
+              <h3 className="me-data-subtitle">Datos de contacto:</h3>
+              <p className="me-data-description me-data-description__email">
+                <img src={Email} alt="" />
+                sarcansino@gmail.com
+              </p>
+            </div>
           </div>
         </div>
       </div>
