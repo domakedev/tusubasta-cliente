@@ -16,9 +16,10 @@ const AboutMe = function AboutMe() {
       <div className="about-main main">
         <h1 className="about-title title">¿Te ha gustado este proyecto?</h1>
         <p className="about-subtitle subtitle">
-          Lo hice con mucho cariño y pasión <br />
-          <br /> Gracias por llegar hasta aquí <br />
-          <br /> Este soy yo
+          🦾 Lo hice con mucho cariño y pasión 🧡 <br />
+          <br /> Gracias por llegar hasta aquí
+          <br />
+          <br /> - Este soy yo -
         </p>
         <div className="about-card">
           <div className="me-card-image-container">
