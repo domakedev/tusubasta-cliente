@@ -72,7 +72,9 @@ const AboutMe = function AboutMe() {
             <div className="me-data-block">
               <h3 className="me-data-subtitle">Un poco sobre mi:</h3>
               <p className="me-data-description">
-                Hola, soy un apasionado por la tecnología y su desarrollo.
+                Hola, soy un apasionado por la tecnología y su desarrollo.{' '}
+                <br />
+                <br />
                 Actualmente me encuentro en el Bootcamp de Make It Real para
                 desarrollar aplicaciones web con el stack MERN de Javascript.{' '}
                 <br />
@@ -88,10 +90,13 @@ const AboutMe = function AboutMe() {
                 Mis aprendizajes en Make It Real:
               </h3>
               <p className="me-data-description">
-                Mejorar mi trabajo en equipo desarrollando esta capacidad usando
-                una metodologia Agil: Scrum y control de versiones Git & GitHub.
-                En el frontend: conocer React a profundidad. En el backend:
-                Aprender como funciona y se desarrolla el backend.
+                He mejorado mi <strong> trabajo en equipo </strong>desarrollando
+                esta capacidad usando una metodologia Agil: Scrum y control de
+                versiones Git & GitHub. <br />
+                <strong>En el frontend:</strong> he conocido React a
+                profundidad. <br />
+                <strong>En el backend:</strong> he aprendido como funciona y se
+                desarrolla el backend.
               </p>
             </div>
             <div className="me-data-block">
