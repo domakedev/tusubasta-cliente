@@ -52,7 +52,7 @@ const Landing = function Landing() {
               No pierdas la oportunidad de comprar a los precios mas bajos del
               mercado. <br />
               <br /> El tiempo de la oferta es limitado y una vez acabado no
-              podras comprar el producto.{' '}
+              podras acceder al producto.{' '}
             </p>
             <Link className="landing-hero-button" to="/home">
               Ver Productos
