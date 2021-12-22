@@ -32,6 +32,9 @@
   text-align: left;
   color: var(--principal-text-color);
 }
+.header-logotype span {
+  font-size: var(--logotype-font-size);
+}
 
 .header-nav-options {
   display: flex;

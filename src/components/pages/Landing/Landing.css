@@ -1,0 +1,164 @@
+.landing-main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.landing-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 84px;
+  margin-top: 55px;
+}
+.hero-text {
+  order: 1;
+  max-width: 600px;
+}
+.landing-title {
+  margin-top: 20px;
+  text-align: left;
+}
+.landing-subtitle {
+  margin-top: 45px;
+  text-align: left;
+  max-width: 492px;
+  font-weight: 400;
+}
+.landing-hero-button {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 152px;
+  height: 58px;
+  background: rgba(255, 72, 32, 1);
+  border-radius: 5px;
+
+  font-family: var(--principal-font-family);
+  font-size: var(--button-font-size);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+.hero-image {
+  width: 300px;
+  transform: scaleX(-1);
+  order: 0;
+}
+.landing-technologies {
+  margin: 185px auto;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+.landing-technologie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.landing-technologie svg {
+  color: #b5bdd2;
+  font-size: 27px;
+}
+.technologie-name {
+  font-family: var(--principal-font-family);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 27px;
+
+  color: #b5bdd2;
+}
+.landing-thanks {
+  background: var(--gradient-background-color);
+  border-radius: 11px;
+  padding: 50px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 116px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.thanks-subtitle {
+  position: absolute;
+  top: 30px;
+  font-family: var(--principal-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.thanks-title {
+  font-family: var(--principal-font-family);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 45px;
+}
+.landing-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.thanks-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 58px;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+
+  font-family: var(--principal-font-family);
+  font-size: var(--button-font-size);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+.thanks-button p {
+  width: 110px;
+  text-align: center;
+}
+
+/* .thanks-button svg {
+  font-size: 3rem;
+  margin-right: 5px;
+} */
+
+.thanks-button-image {
+  margin-right: 5px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 840px) {
+  .hero-text {
+  }
+  .hero-image {
+    transform: scaleX(1);
+    width: 500px;
+  }
+  .landing-hero {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .hero-text {
+    order: 0;
+  }
+  .hero-image {
+    order: 1;
+  }
+}
