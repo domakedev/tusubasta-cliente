@@ -10,6 +10,8 @@ const Home = function Home() {
   const [loading, setLoading] = useState([])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+
     const bringProducts = async function bringProducts() {
       try {
         setLoading(true)
