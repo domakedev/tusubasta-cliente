@@ -32,7 +32,7 @@ const TechnologiesData = [
     name: 'JavaScript',
   },
   {
-    id: 0,
+    id: 4,
     icon: <SiReact />,
     name: 'React Js',
   },
